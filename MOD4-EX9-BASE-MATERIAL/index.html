@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="utf-8">
+        <title>TAW-MOD4-EX9</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <h1><img src="logo.png" title="HTML5" class="logo" /> Audio</h1>
+            </header>
+            <div class="main">
+                <section class="posts">
+                    <article class="post">
+                        <h2>audio</h2>
+                        <!-- criar audio nativo do browser aqui -->
+                        
+                        <p>Atributos a ter em conta:</p>
+                        <ul class="generic-list">
+                            <li><strong>autoplay</strong>: Toca o audio automaticamente;</li>
+                            <li><strong>controls</strong>: Mostra os controlos nativos do browser;</li>
+                            <li><strong>loop</strong>: Recomeça automaticamente no final;</li>
+                            <li><strong>preload</strong>: Pode assumir três valores:</li>
+                            <li>
+                                <ul>
+                                    <li><strong>none</strong>: Não faz auto-carregamento;</li>
+                                    <li><strong>metadata</strong>: Carrega apenas metadados (útil quando se quer programar com JavaScript);</li>
+                                    <li><strong>auto</strong>: Carrega tudo automaticamente (útil para aplicações dependentes de audio);</li>
+                                </ul>
+                            </li>
+                        </p>
+                    </article>
+                    
+                    <article class="post">
+                        <!-- criar audio com controlos por javascript aqui -->
+                        
+                        <!-- controlos do player -->
+                        <div class="audio-controls">
+                            <button id="play">Play</button>
+                            <button id="pause">Pause</button>
+                            <button id="stop">Stop</button>
+                            <div id="audio-time">
+                                <div id="audio-bar"></div>
+                            </div>
+                        </div>
+                        <ul class="generic-list">
+                            <li><strong>.play()</strong> - Coloca o audio a tocar;</li>
+                            <li><strong>.pause()</strong> - Coloca o audio em pausa;</li>
+                            <li><strong class="unexistent">.stop()</strong> - Não existe.. Dica: <em>currentTime</em>;</li>
+                        </ul>
+                    </article>
+                    
+                </section>
+            </div>
+        </div>
+        <script src="scripts.js"></script>
+        <script>
+            window.onload = installAudioControls;
+        </script>
+    </body>
+</html>
